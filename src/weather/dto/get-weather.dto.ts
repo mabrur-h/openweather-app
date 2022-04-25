@@ -2,7 +2,7 @@ import {Field, InputType} from "@nestjs/graphql";
 import {IsDateString, IsNumber} from "class-validator";
 
 @InputType()
-export class WeatherInput {
+export class GetWeatherDto {
     @IsNumber()
     @Field()
     lat: number

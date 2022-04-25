@@ -10,7 +10,7 @@ import {ConfigModule} from "@nestjs/config";
     providers: [
         WeatherResolver,
         WeatherService
-    ]
+    ],
 })
 export class WeatherModule {
 
