@@ -1,6 +1,7 @@
 import {BadRequestException, Injectable} from '@nestjs/common';
 import axios, {AxiosInstance} from 'axios';
 import {ConfigService} from "@nestjs/config";
+import {WeatherType} from "./weather.type";
 
 @Injectable()
 export class WeatherService {
@@ -19,7 +20,7 @@ export class WeatherService {
         })
     }
 
-    async getWeather(lat, lon, date): Promise<Object> {
+    async getWeather(lat, lon, date): Promise<WeatherType> {
         const startDate = new Date()
         let endDate = new Date()
         endDate.setDate(endDate.getDate() + 7);
